@@ -61,6 +61,14 @@ public class Steque1<Item> implements Iterable<Item> {
         a[0]=item;
         n++;
     }
+    private void resize (int capacity){
+        Item temp []=(Item[]) new Object[capacity]
+        for(int k=0;k<a.length;k++){
+            temp[k]=a[k];
+
+        }
+        a=temp;
+    }
     
     
     /**
@@ -68,6 +76,9 @@ public class Steque1<Item> implements Iterable<Item> {
      * @param item Item to be inserted.
      */
     public void push(Item item) {
+        if(item ==null)
+        throw new 
+
 
     }
     
