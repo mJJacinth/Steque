@@ -52,8 +52,7 @@ public class Steque1<Item> implements Iterable<Item> {
      * @param item Item to be inserted.
      */
     public void enqueue(Item item) {
-        if(item==null)
-        throw new IllegalArgumentException();
+        if(item==null) throw new IllegalArgumentException();
         if(n>=a.length) resize(2*aa.length);
         for(int i =a.length -1;i>0;i--)
         a[i]=a[i-1];
@@ -75,8 +74,7 @@ public class Steque1<Item> implements Iterable<Item> {
      * @param item Item to be inserted.
      */
     public void push(Item item) {
-        if(item ==null)
-        throw new IllegalArgumentException();
+        if(item ==null) throw new IllegalArgumentException();
         if(n>=a.length) resize(2*a.length);
         a[n]=item;
         n++;
@@ -87,6 +85,11 @@ public class Steque1<Item> implements Iterable<Item> {
      * @return Item object from steque.
      */
     public Item pop() {
+        if(isEmpty()) throw new NoSuchElementException();
+        Item item =a[n-1];
+        a[n-1]=null;
+        n--;
+        return item;
 
     }
     
