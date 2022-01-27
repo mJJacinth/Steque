@@ -35,6 +35,7 @@ public class Steque<Item> implements Iterable<Item> {
     private class Node{
         Item item;
         Node next;
+    }
 
     /**
      * constructs a steque object.
@@ -61,7 +62,7 @@ public class Steque<Item> implements Iterable<Item> {
         first=last;
         else
         oldlast.next=last;
-        n++;0
+        n++;
     }
     
     
@@ -154,7 +155,7 @@ public class Steque<Item> implements Iterable<Item> {
             while(!s.isEmpty()){
                 System.out.println(s.pop());
             }
-
+        
     
     }
 }
